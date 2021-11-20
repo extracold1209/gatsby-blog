@@ -1,14 +1,15 @@
-import React from "react"
+import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { site, markdownRemark } = data // data.markdownRemark holds your post data
-  const { siteMetadata } = site
-  const { frontmatter, html } = markdownRemark
+}){
+  const { site, markdownRemark } = data; // data.markdownRemark holds your post data
+  const { siteMetadata } = site;
+  const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
       <Helmet>
@@ -37,7 +38,7 @@ export default function Template({
         </article>
       </div>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -58,4 +59,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
