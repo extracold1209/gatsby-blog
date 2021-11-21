@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 /**
  * Configure your Gatsby site with this file.
  *
@@ -60,5 +61,13 @@ module.exports = {
     // siteURL is a must for sitemap generation
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: 'jsx', // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
+    },
   ],
 };

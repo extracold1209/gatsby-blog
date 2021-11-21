@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const PostLink = ({ post }) => (
+type Props = {
+  post: any;
+}
+
+const PostLink: React.FC<Props> = ({ post }) => (
   <article className="card ">
     <Link to={post.frontmatter.path}>
       {!!post.frontmatter.thumbnail && (

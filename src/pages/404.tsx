@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import { Link } from 'gatsby';
 
-const notFound = () => {
+const NotFoundComponent: React.FC = () => {
   return (
     <Layout>
       <Helmet>
@@ -43,4 +43,4 @@ const notFound = () => {
   );
 };
 
-export default notFound;
+export default NotFoundComponent;

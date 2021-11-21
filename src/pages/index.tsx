@@ -1,11 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import Layout from '../components/layout';
-import PostLink from '../components/post-link';
+import PostLink from '../components/postLink';
 import HeroHeader from '../components/heroHeader';
 
-const IndexPage = ({
+const IndexPage: React.FC<PageProps<any>> = ({
   data: {
     site,
     allMarkdownRemark: { edges },
@@ -13,8 +13,8 @@ const IndexPage = ({
 }) => {
 
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+    .filter((edge: any) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map((edge: any) => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
     <Layout>
