@@ -25,5 +25,6 @@ module.exports = {
     semi: ['error', 'always'],
     'linebreak-style': ['error', 'unix'],
     'quote-props': ['error', 'as-needed']
-  }
+  },
+  ignorePatterns: ['graphql-types.ts']
 };
